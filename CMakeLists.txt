@@ -5,6 +5,7 @@ set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Release>:Release>")
 
 add_subdirectory("thirdparty/glfw")
 add_subdirectory("thirdparty/glad")
+add_subdirectory("thirdparty/glm")
 
 project(Interaction2D)
 set(CMAKE_CXX_STANDARD 17)
@@ -19,4 +20,4 @@ target_compile_definitions("${PROJECT_NAME}" PUBLIC RESOURCES_PATH="${CMAKE_CURR
 
 
 target_include_directories(Interaction2D PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include/")
-target_link_libraries(Interaction2D PRIVATE glfw glad)
+target_link_libraries(Interaction2D PRIVATE glfw glad glm)
